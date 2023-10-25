@@ -31,6 +31,7 @@ namespace OpenStore
         {
             string terms = this.TxtCode.Text;
             float amount = float.Parse(this.TxtAmount.Text);
+            this.TxtCode.Text = "";
             if (cupomItems.Where(ci => ci.Code.Equals(terms) || ci.Description.Equals(terms)).Count() > 0)
             {
                 CupomItem cupomItem = cupomItems.Where(ci => ci.Code.Equals(terms)).First();
@@ -43,18 +44,20 @@ namespace OpenStore
                 try
                 {
                     Product product = await productService.SearchProduct(terms);
-
                     if (cupomItems.Where(ci => ci.Code.Equals(product.Code)).Count() > 0)
                     {
                         CupomItem cupomItem = cupomItems.Where(ci => ci.Code.Equals(terms)).First();
                         cupomItem.Quantity += amount;
                         this.itemsGrid.Rows[cupomItems.IndexOf(cupomItem)].Cells[2].Value = cupomItem.Quantity;
                         this.itemsGrid.Rows[cupomItems.IndexOf(cupomItem)].Cells[3].Value = cupomItem.GetTotal();
+                    } else
+                    {
+                        CupomItem ci = CupomItem.NewCupomItem(product, amount);
+                        cupomItems.Add(ci);
+                        this.itemsGrid.Rows.Add(ci.Code, ci.Description, ci.Quantity, ci.GetTotal());
                     }
 
-                    CupomItem ci = CupomItem.NewCupomItem(product, amount);
-                    cupomItems.Add(ci);
-                    this.itemsGrid.Rows.Add(ci.Code, ci.Description, ci.Quantity, ci.GetTotal());
+                    
 
                 }
                 catch (Exception) { }

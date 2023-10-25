@@ -52,7 +52,7 @@ namespace OpenStore.Services
 
         public async Task<Product> SearchProduct(string terms)
         {
-            string uri = BaseURL + "?search=" + terms;
+            string uri = BaseURL + "/search?terms=" + terms;
             using var client = new HttpClient();
             using var response = await client.GetAsync(uri);
 

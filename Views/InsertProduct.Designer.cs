@@ -44,23 +44,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.optUnit = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtWholesalePrice = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtWholesaleAmount = new System.Windows.Forms.TextBox();
+            this.txtRetailPrice = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCusto = new System.Windows.Forms.TextBox();
-            this.txtWholesalePrice = new System.Windows.Forms.TextBox();
-            this.txtRetailPrice = new System.Windows.Forms.TextBox();
-            this.optUnit = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtWholesaleAmount = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,8 +71,8 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -176,7 +176,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -213,7 +213,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -250,7 +250,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
@@ -287,9 +287,27 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel6.TabIndex = 4;
+            // 
+            // optUnit
+            // 
+            this.optUnit.BackColor = System.Drawing.SystemColors.Menu;
+            this.optUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.optUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optUnit.FormattingEnabled = true;
+            this.optUnit.Items.AddRange(new object[] {
+            "UNIDADE",
+            "METRO",
+            "LITRO",
+            "KG"});
+            this.optUnit.Location = new System.Drawing.Point(196, 3);
+            this.optUnit.Name = "optUnit";
+            this.optUnit.Size = new System.Drawing.Size(575, 34);
+            this.optUnit.TabIndex = 4;
+            this.optUnit.Text = "UNIDADE";
             // 
             // label4
             // 
@@ -314,7 +332,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel7.TabIndex = 5;
             // 
@@ -351,7 +369,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel8.TabIndex = 6;
             // 
@@ -365,6 +383,17 @@
             this.label6.Size = new System.Drawing.Size(126, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Atacado";
+            // 
+            // txtWholesalePrice
+            // 
+            this.txtWholesalePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtWholesalePrice.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtWholesalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtWholesalePrice.Location = new System.Drawing.Point(196, 3);
+            this.txtWholesalePrice.Name = "txtWholesalePrice";
+            this.txtWholesalePrice.Size = new System.Drawing.Size(575, 34);
+            this.txtWholesalePrice.TabIndex = 0;
+            this.txtWholesalePrice.Text = "0,00";
             // 
             // tableLayoutPanel9
             // 
@@ -393,43 +422,16 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Varejo";
             // 
-            // tableLayoutPanel11
+            // txtRetailPrice
             // 
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel11.Controls.Add(this.txtWholesaleAmount, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 449);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(774, 35);
-            this.tableLayoutPanel11.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(6, 1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 32);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Qtd.Atacado";
-            // 
-            // txtWholesaleAmount
-            // 
-            this.txtWholesaleAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtWholesaleAmount.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtWholesaleAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.txtWholesaleAmount.Location = new System.Drawing.Point(196, 3);
-            this.txtWholesaleAmount.Name = "txtWholesaleAmount";
-            this.txtWholesaleAmount.Size = new System.Drawing.Size(575, 34);
-            this.txtWholesaleAmount.TabIndex = 0;
-            this.txtWholesaleAmount.Text = "0";
+            this.txtRetailPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRetailPrice.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtRetailPrice.Location = new System.Drawing.Point(196, 3);
+            this.txtRetailPrice.Name = "txtRetailPrice";
+            this.txtRetailPrice.Size = new System.Drawing.Size(575, 34);
+            this.txtRetailPrice.TabIndex = 0;
+            this.txtRetailPrice.Text = "0,00";
             // 
             // tableLayoutPanel10
             // 
@@ -443,7 +445,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(774, 36);
             this.tableLayoutPanel10.TabIndex = 12;
             // 
@@ -469,45 +471,43 @@
             this.txtCusto.TabIndex = 0;
             this.txtCusto.Text = "0,00";
             // 
-            // txtWholesalePrice
+            // tableLayoutPanel11
             // 
-            this.txtWholesalePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtWholesalePrice.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtWholesalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.txtWholesalePrice.Location = new System.Drawing.Point(196, 3);
-            this.txtWholesalePrice.Name = "txtWholesalePrice";
-            this.txtWholesalePrice.Size = new System.Drawing.Size(575, 34);
-            this.txtWholesalePrice.TabIndex = 0;
-            this.txtWholesalePrice.Text = "0,00";
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel11.Controls.Add(this.txtWholesaleAmount, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 449);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(774, 35);
+            this.tableLayoutPanel11.TabIndex = 9;
             // 
-            // txtRetailPrice
+            // txtWholesaleAmount
             // 
-            this.txtRetailPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRetailPrice.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.txtRetailPrice.Location = new System.Drawing.Point(196, 3);
-            this.txtRetailPrice.Name = "txtRetailPrice";
-            this.txtRetailPrice.Size = new System.Drawing.Size(575, 34);
-            this.txtRetailPrice.TabIndex = 0;
-            this.txtRetailPrice.Text = "0,00";
+            this.txtWholesaleAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtWholesaleAmount.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtWholesaleAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtWholesaleAmount.Location = new System.Drawing.Point(196, 3);
+            this.txtWholesaleAmount.Name = "txtWholesaleAmount";
+            this.txtWholesaleAmount.Size = new System.Drawing.Size(575, 34);
+            this.txtWholesaleAmount.TabIndex = 0;
+            this.txtWholesaleAmount.Text = "0";
             // 
-            // optUnit
+            // label9
             // 
-            this.optUnit.BackColor = System.Drawing.SystemColors.Menu;
-            this.optUnit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.optUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optUnit.FormattingEnabled = true;
-            this.optUnit.Items.AddRange(new object[] {
-            "UNIDADE",
-            "METRO",
-            "LITRO",
-            "KG"});
-            this.optUnit.Location = new System.Drawing.Point(196, 3);
-            this.optUnit.Name = "optUnit";
-            this.optUnit.Size = new System.Drawing.Size(575, 34);
-            this.optUnit.TabIndex = 4;
-            this.optUnit.Text = "UNIDADE";
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(6, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(184, 32);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Qtd.Atacado";
             // 
             // InsertProduct
             // 
@@ -543,10 +543,10 @@
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
