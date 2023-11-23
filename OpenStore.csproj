@@ -36,6 +36,9 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.PDF, Version=23.11.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>packages\Aspose.PDF.23.11.1\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -59,11 +62,18 @@
     <Compile Include="Models\Cupom.cs" />
     <Compile Include="Models\CupomItem.cs" />
     <Compile Include="Services\CupomService.cs" />
+    <Compile Include="Services\PrintService.cs" />
     <Compile Include="Views\Caixa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Caixa.Designer.cs">
       <DependentUpon>Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CPFReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CPFReader.Designer.cs">
+      <DependentUpon>CPFReader.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\EditProduct.cs">
       <SubType>Form</SubType>
@@ -103,6 +113,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\Caixa.resx">
       <DependentUpon>Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CPFReader.resx">
+      <DependentUpon>CPFReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>

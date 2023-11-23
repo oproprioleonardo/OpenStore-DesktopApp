@@ -326,6 +326,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caixa";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Caixa_FormClosed);
+            this.Load += new System.EventHandler(this.Caixa_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

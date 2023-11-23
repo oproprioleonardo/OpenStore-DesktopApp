@@ -18,8 +18,14 @@ namespace OpenStore.Views
 
         private void btnAbrirCupom_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            new Caixa(this).Show(this);
+            CPFReader reader = new CPFReader();
+            reader.ShowDialog();
+
+            if (reader.DialogResult == DialogResult.Yes)
+            {
+                this.Visible = false;
+                new Caixa(this, reader.CPF).Show(this);
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

@@ -18,12 +18,12 @@ namespace OpenStore
         private readonly Form mainForm;
 
 
-        public Caixa(Form mainForm)
+        public Caixa(Form mainForm, string cpf)
         {
             InitializeComponent();
             productService = AppModule.GetProductService();
             cupomService = AppModule.GetCupomService();
-            cupom = Cupom.NewCupom(DateTime.Now, "Cliente Comum", cupomItems);
+            cupom = Cupom.NewCupom(DateTime.Now, cpf ?? "Cliente Comum", cupomItems);
             this.mainForm = mainForm;
         }
 
@@ -32,9 +32,10 @@ namespace OpenStore
             string terms = this.TxtCode.Text;
             float amount = float.Parse(this.TxtAmount.Text);
             this.TxtCode.Text = "";
-            if (cupomItems.Where(ci => ci.Code.Equals(terms) || ci.Description.Equals(terms)).Count() > 0)
+            if (cupomItems.Where(ci => ci.Code.Equals(terms) || ci.Description.ToLower().Contains(terms.ToLower())).Count() > 0)
             {
-                CupomItem cupomItem = cupomItems.Where(ci => ci.Code.Equals(terms)).First();
+                CupomItem cupomItem = cupomItems.Where(ci => ci.Code.Equals(terms) || ci.Description.ToLower().Contains(terms.ToLower())).First();
+
                 cupomItem.Quantity += amount;
                 this.itemsGrid.Rows[cupomItems.IndexOf(cupomItem)].Cells[2].Value = cupomItem.Quantity;
                 this.itemsGrid.Rows[cupomItems.IndexOf(cupomItem)].Cells[3].Value = cupomItem.GetTotal();
@@ -94,6 +95,11 @@ namespace OpenStore
                 this.itemsGrid.Rows.RemoveAt(e.RowIndex);
                 this.TxtTotal.Text = "R$ " + cupom.GetTotal().ToString("N2");
             }
+        }
+
+        private void Caixa_Load(object sender, EventArgs e)
+        {
+            this.TxtCode.Select();
         }
     }
 }

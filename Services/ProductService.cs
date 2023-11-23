@@ -72,6 +72,7 @@ namespace OpenStore.Services
             string uri = BaseURL;
             using var client = new HttpClient();
 
+
             var content = new StringContent(JsonConvert.SerializeObject(product), System.Text.Encoding.UTF8, "application/json");
             using var response = await client.PostAsync(uri, content);
 
